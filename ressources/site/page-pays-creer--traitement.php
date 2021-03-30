@@ -6,13 +6,16 @@
 <main class="pays-creer">
 <?php
   
+  //Protection des données via la fonction htmlspecialchars()
+
   $countryName = htmlspecialchars($_POST['country_name']);
   $countryFlag = htmlspecialchars($_POST['country_flag']);
   $countryCapital = htmlspecialchars($_POST['country_capital']);
   $countryArea =htmlspecialchars($_POST["country_area"]);
  
-  var_dump($countryArea);
 
+  // Création de requête préparée 
+  // Ajout try catch pour gérer les éventuelles erreurs
   try{
 
 
@@ -23,7 +26,7 @@
       ":country_name"=>$countryName,
       ":country_flag"=>$countryFlag,
       ":country_capital"=>$countryCapital,
-      ":country_area"=>number_format($countryArea)
+      ":country_area"=>$countryArea
   ]);
 
   echo "<h3>Merci !</h3>";

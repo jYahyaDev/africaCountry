@@ -1,8 +1,11 @@
 <?php
 
-  define("DB_SERVER", "localhost");
-  define("DB_DATABASE", "country");
-  define("DB_USERNAME", "jyahya");
-  define("DB_PASSWORD", "Azerty30900!");
+   
+  define("DB_SERVER", "hu15z.myd.infomaniak.com");
+  define("DB_DATABASE", "hu15z_dev5");
+  define("DB_USERNAME", "hu15z_dev5");
+  define("DB_PASSWORD", "WThx_ixBt2eP"); 
+
+
 
 ?>

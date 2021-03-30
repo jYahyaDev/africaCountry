@@ -7,12 +7,18 @@
 <?php
   
   $tableau = [];
-  $requete = "SELECT * FROM `country` ORDER BY `country_area`";
+  $requete = "SELECT * FROM `country` ORDER BY `country_name`";
   try {
     $etape = $pdo->prepare($requete);
     $etape->execute();
+ 
     $nbreResultat = $etape->rowCount();
-    if ($nbreResultat) $tableau = $etape->fetchAll();
+    if ($nbreResultat){
+      
+      $tableau = $etape->fetchAll();
+      
+
+    }
     else echo "<pre>✖️ La requête SQL ne retourne aucun résultat</pre>";
   } catch (PDOException $e) {
     echo "<pre>✖️ Erreur liée à la requête SQL :\n" . $e->getMessage() . "</pre>";
